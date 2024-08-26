@@ -316,13 +316,11 @@ window.addEventListener("DOMContentLoaded", () => {
     
     toggleButton.addEventListener('click', function () {
         if (game.isStarted) {
-            toggleButton.textContent = 'Start'; // Change text to "Start"
+            toggleButton.textContent = 'Start'; 
             game.stop();
-            // Add your stop action logic here
         } else {
-            toggleButton.textContent = 'Stop'; // Change text to "Stop"
+            toggleButton.textContent = 'Stop'; 
             game.start();         
-            // Add your start action logic here
         }
     });
 })
