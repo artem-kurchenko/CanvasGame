@@ -1,13 +1,16 @@
 import { HeroBall, HeroBallProps } from "./hero";
 import { getMousePos, circleIntersect } from "./utils";
 
-type DuelGameProps = {
+interface DuelGameProps{
     container: string | Element | null;
     width: number;
     height: number;
     changeScoreCallback?: () => void;
+    className: string
 };
+
 type GameHeroProps = Pick<HeroBallProps, "radius" | "speed" | "color">;
+
 export class DuelGame {
     container: Element | null;
     width: number;
@@ -19,8 +22,9 @@ export class DuelGame {
     canvas!: HTMLCanvasElement;
     h1!: HeroBall;
     h2!: HeroBall;
+    cssClass: string;
 
-    constructor({ container, width, height, changeScoreCallback }: DuelGameProps) {
+    constructor({ container, width, height, changeScoreCallback, className }: DuelGameProps) {
         if (typeof container === "string" || container instanceof String) {
             this.container = document.querySelector(container as string) ||
                 document.querySelector(`#${container}`) ||
@@ -37,6 +41,7 @@ export class DuelGame {
         this.h2Count = 0;
         this.changeScoreCallback = changeScoreCallback;
         this.isStarted = false;
+        this.cssClass = className;
     }
 
     private _renderCanvas(): void {
@@ -44,7 +49,7 @@ export class DuelGame {
         canvas.id = "duel_game_canvas";
         canvas.width = this.width;
         canvas.height = this.height;
-        canvas.classList.add('game');
+        canvas.classList.add(this.cssClass);
         this.container?.appendChild(canvas);
         this.canvas = canvas;
     }

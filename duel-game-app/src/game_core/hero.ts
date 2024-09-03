@@ -18,7 +18,6 @@ export class HeroBall extends Ball {
 
     constructor({ speed, spellColor, spellSpeed, ...props }: HeroBallProps) {
         super(props);
-        new Ball(props)
         this.vy = speed || 2;
         this.spellColor = spellColor || "blue";
         this.spellSpeed = spellSpeed || 1;

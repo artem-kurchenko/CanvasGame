@@ -9,3 +9,8 @@ export function getMousePos(canvas: HTMLCanvasElement, evt: MouseEvent) {
         y: evt.clientY - rect.top
     };
 }
+
+export function isPointInCircle(x: number, y: number, cx: number, cy: number, radius: number) {
+    const distance = Math.sqrt((x - cx) ** 2 + (y - cy) ** 2);
+    return distance <= radius;
+}
