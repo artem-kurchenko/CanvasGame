@@ -1,0 +1,27 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.game-layout{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.row-game {
+  display: flex;
+  flex-direction: row;
+}
+.row-score{
+  width: 100%;
+  text-align: center;
+}
+.row-button {
+  width: 100%;
+}
+.hero-settings {
+  display: flex;
+  flex-direction: column;
+}
