@@ -1,5 +1,7 @@
 # Duel Game
 
+<img width="825" alt="Screenshot 2024-09-03 at 16 28 33" src="https://github.com/user-attachments/assets/0707b8be-a778-4db8-a8d5-8abe4bdda371">
+
 ## Overview
 
 **Canvas Field:** A rectangular play area with two circles representing heroes engaged in battle.
@@ -30,5 +32,6 @@ Each hero has sliders to adjust their firing rate and movement speed.
 - No specific design \ theme style. Just basic CSS
 - Typings are not defined everywhere
 - Not all Game props can be changed via the React State
-- Core classes (Game, Ball descendants ) don't use private fields   
+- Core classes (Game, Ball descendants ) don't use private fields
+- No specific Style rules in code 
   
