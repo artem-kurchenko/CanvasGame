@@ -33,5 +33,6 @@ Each hero has sliders to adjust their firing rate and movement speed.
 - Typings are not defined everywhere
 - Not all Game props can be changed via the React State
 - Core classes (Game, Ball descendants ) don't use private fields
-- No specific Style rules in code 
+- No specific Style rules in code
+- No tests 
   
